@@ -31,3 +31,19 @@ Perancangan arsitekur dan Draft Class.
 1. nilai_wawancara `int`
 2. nilai_keterampilan `int`
 3. nilai_sikap `int`
+
+## Flow pendaftaran
+```mermaid
+ graph TD
+    A[User] -->|Melakukan pendaftaran| B(Selamat Datang)
+    B --> C{Menu}
+    C --> D{Formulir}
+    D --> E(Class Civitas)
+    D --> F(Riwayat Organisasi, Motivasi)
+    D --> G(Cancel)
+
+    C --> H{Pemilihan UKM}
+    H --> J(list)
+    C --> I(Quit)
+```
+```
