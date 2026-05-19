@@ -17,15 +17,16 @@ class Pendaftar:
         pass
     
 class UKM:
-    def __init__(self, nama_ukm, desk_kegiatan, kuota_anggota):
+    def __init__(self, nama_ukm, desk_kegiatan, kuota_pendaftar):
         self.nama_ukm = nama_ukm
         self.desk_kegiatan = desk_kegiatan
-        self.kuota_anggota = kuota_anggota
+        self.kuota_pendaftar = kuota_pendaftar
         pass
 
 class seleksi:
-    def __init__(self, nilai, pengumuman):
-        self.nilai = nilai
-        self.pengumuman = pengumuman
+    def __init__(self, nilai_wawancara, nilai_keterampilan, nilai_sikap):
+        self.nilai_wawancara = nilai_wawancara
+        self.nilai_keterampilan = nilai_keterampilan
+        self.nilai_sikap = nilai_sikap
         pass
        
