@@ -2,37 +2,55 @@ import json
 import os
 from models import Pendaftar, UKM, seleksi
 
+# ================= KONFIGURASI & TEMPLATE =================
 FILE_DATA = "data_ormawa.json"
+
+# Daftar UKM Standar yang harus selalu ada
+UKM_AWAL = [
+    {"nama": "UKM Robotika", "desk": "Fokus pengembangan robot dan AI", "kuota": 5},
+    {"nama": "UKM Paduan Suara", "desk": "Pengembangan bakat seni suara", "kuota": 10},
+    {"nama": "UKM Olahraga", "desk": "Fokus pada pengembangan fisik dan kerjasama tim", "kuota": 15},
+    {"nama": "UKM Mapala", "desk": "Kegiatan alam bebas dan pelestarian lingkungan", "kuota": 10}
+]
 
 # ================= FUNGSI PENYIMPANAN =================
 def simpan_data(list_ukm, list_pendaftar):
-    # Bungkus semua data ke dalam satu dictionary besar
     data = {
         "ukm": [ukm.to_dict() for ukm in list_ukm],
         "pendaftar": [p.to_dict() for p in list_pendaftar]
     }
-    # Tulis ke file JSON
     with open(FILE_DATA, "w") as f:
         json.dump(data, f, indent=4)
 
 def muat_data():
     list_ukm = []
     list_pendaftar = []
-    # Cek apakah file data_ormawa.json sudah ada
+    
+    # 1. Baca data lama jika ada
     if os.path.exists(FILE_DATA):
-        with open(FILE_DATA, "r") as f:
-            data = json.load(f)
-            # Kembalikan dictionary menjadi Object UKM
-            for u_data in data.get("ukm", []):
-                list_ukm.append(UKM.from_dict(u_data))
-            # Kembalikan dictionary menjadi Object Pendaftar
-            for p_data in data.get("pendaftar", []):
-                list_pendaftar.append(Pendaftar.from_dict(p_data))
-    else:
-        # Jika file belum ada, buat dummy data awal
-        list_ukm.append(UKM("UKM Robotika", "Fokus pengembangan robot dan AI", 5))
-        list_ukm.append(UKM("UKM Paduan Suara", "Pengembangan bakat seni suara", 10))
-        simpan_data(list_ukm, list_pendaftar) # Langsung simpan
+        try:
+            with open(FILE_DATA, "r") as f:
+                data = json.load(f)
+                for u_data in data.get("ukm", []):
+                    list_ukm.append(UKM.from_dict(u_data))
+                for p_data in data.get("pendaftar", []):
+                    list_pendaftar.append(Pendaftar.from_dict(p_data))
+        except (json.JSONDecodeError, FileNotFoundError):
+            pass
+
+    # 2. LOGIKA MERGE: Tambahkan UKM template jika belum ada di list
+    # Ini memastikan data tidak teriset, hanya bertambah
+    nama_ukm_terdaftar = [u.nama_ukm for u in list_ukm]
+    perlu_simpan = False
+    
+    for template in UKM_AWAL:
+        if template["nama"] not in nama_ukm_terdaftar:
+            list_ukm.append(UKM(template["nama"], template["desk"], template["kuota"]))
+            perlu_simpan = True
+            
+    # Jika baru pertama kali (file belum ada) atau ada UKM baru ditambahkan, simpan ke file
+    if perlu_simpan or not os.path.exists(FILE_DATA):
+        simpan_data(list_ukm, list_pendaftar)
         
     return list_ukm, list_pendaftar
 
