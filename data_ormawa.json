@@ -11,19 +11,5 @@
             "kuota_pendaftar": 10
         }
     ],
-    "pendaftar": [
-        {
-            "nama": "Budi Santoso",
-            "NIM": "12345678",
-            "prodi": "Teknik Informatika",
-            "fakultas": "FST",
-            "tanggal_lahir": "01-01-2005",
-            "angkatan": "2023",
-            "kontak": "08123456789",
-            "riwayat_organisasi": "Ketua OSIS SMA",
-            "status_kelulusan": "Diproses",
-            "motivasi": "Ingin menambah relasi dan skill",
-            "hasil_seleksi": null
-        }
-    ]
+    "pendaftar": []
 }
