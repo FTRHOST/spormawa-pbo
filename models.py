@@ -24,12 +24,13 @@ class Civitas:
         }
 
 class Pendaftar(Civitas):
-    def __init__(self, nama, NIM, prodi, fakultas, tanggal_lahir, angkatan, kontak, riwayat_organisasi, status_kelulusan, motivasi):
+    def __init__(self, nama, NIM, prodi, fakultas, tanggal_lahir, angkatan, kontak, riwayat_organisasi, status_kelulusan, motivasi, ukm_pilihan="Belum Memilih"):
         super().__init__(nama, NIM, prodi, fakultas, tanggal_lahir, angkatan, kontak)
         self.riwayat_organisasi = riwayat_organisasi
         self.__status_kelulusan = status_kelulusan
         self.motivasi = motivasi
-        self.hasil_seleksi = None  # <--- TAMBAHKAN INI (Nilai awal kosong sebelum dinilai Admin)
+        self.ukm_pilihan = ukm_pilihan  # <--- Menyimpan nama UKM yang dipilih
+        self.hasil_seleksi = None
 
     def get_status_kelulusan(self):
         return self.__status_kelulusan
@@ -43,20 +44,19 @@ class Pendaftar(Civitas):
             "riwayat_organisasi": self.riwayat_organisasi,
             "status_kelulusan": self.get_status_kelulusan(),
             "motivasi": self.motivasi,
-            # Simpan data seleksi jika admin sudah memberi nilai
+            "ukm_pilihan": self.ukm_pilihan, # <--- Masuk ke JSON
             "hasil_seleksi": self.hasil_seleksi.to_dict() if self.hasil_seleksi else None
         })
         return data
 
     @classmethod
     def from_dict(cls, data):
-        # Buat objek pendaftar
         pendaftar = cls(
             data["nama"], data["NIM"], data["prodi"], data["fakultas"],
             data["tanggal_lahir"], data["angkatan"], data["kontak"],
-            data["riwayat_organisasi"], data["status_kelulusan"], data["motivasi"]
+            data["riwayat_organisasi"], data["status_kelulusan"], data["motivasi"],
+            data.get("ukm_pilihan", "Belum Memilih") # <--- Baca dari JSON
         )
-        # Jika di JSON ada data "hasil_seleksi", ubah kembali jadi objek Seleksi
         if data.get("hasil_seleksi"):
             pendaftar.hasil_seleksi = seleksi.from_dict(data["hasil_seleksi"])
             

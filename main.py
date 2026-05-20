@@ -71,6 +71,9 @@ while True:
     if pilihan_login == "1":
         # ================= MENU USER =================
         while True:
+            # Sync data terbaru dari file
+            list_ukm, list_pendaftar = muat_data()
+            
             print("\n" + "-"*30)
             print("   MENU USER / PENDAFTAR")
             print("-"*30)
@@ -111,7 +114,8 @@ while True:
                         # 3. Membuat objek Pendaftar baru
                         mhs_baru = Pendaftar(
                             nama, nim, prodi, fakultas, tgl_lahir, angkatan, kontak,
-                            riwayat_organisasi=riwayat, status_kelulusan="Diproses", motivasi=motivasi
+                            riwayat_organisasi=riwayat, status_kelulusan="Diproses", motivasi=motivasi,
+                            ukm_pilihan=list_ukm[pilih_ukm].nama_ukm # <--- Tambahkan nama UKM
                         )
                         
                         # 4. Memasukkan pendaftar ke list global dan list internal milik UKM
@@ -188,7 +192,7 @@ while True:
                 for i, p in enumerate(list_pendaftar):
                     # Tampilkan nilai rata-rata jika sudah dinilai
                     info_nilai = f"- Rata-rata: {p.hasil_seleksi.hitung_rata_rata():.2f}" if p.hasil_seleksi else "- Belum dinilai"
-                    print(f"{i+1}. {p.nama} (NIM: {p.get_nim()}) | Status: {p.get_status_kelulusan()} {info_nilai}")
+                    print(f"{i+1}. {p.nama} ({p.ukm_pilihan}) | Status: {p.get_status_kelulusan()} {info_nilai}")
                     
                 try:
                     pilih_mhs = int(input("\nPilih nomor mahasiswa untuk dinilai (atau 0 untuk batal): ")) - 1
