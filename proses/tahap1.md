@@ -32,18 +32,37 @@ Perancangan arsitekur dan Draft Class.
 2. nilai_keterampilan `int`
 3. nilai_sikap `int`
 
-## Flow pendaftaran
+## Flow Pendaftaran User
 ```mermaid
  graph TD
-    A[User] -->|Melakukan pendaftaran| B(Selamat Datang)
-    B --> C{Menu}
-    C --> D{Formulir}
-    D --> E(Class Civitas)
-    D --> F(Riwayat Organisasi, Motivasi)
+    login{Login} --> A
+    login --> M
+
+
+    A[User] -->|Melakukan pendaftaran| B(Selamat Datang 'Menu')
+    B --> D{Formulir}
+    H --> E(Memasukan Data Diri 'class civitas & pendaftar')
     D --> G(Cancel)
 
-    C --> H{Pemilihan UKM}
-    H --> J(list)
-    C --> I(Quit)
-```
+    D --> H{Pemilihan UKM}
+    H --> J(cancel)
+    B --> I(Quit)
+
+    M[Admin] -->|Masuk ke program| O(Selamat Datang Admin 'Menu')
+    O --> P(Data UKM)
+    P --> CncleD(cancel)
+    P --> V(tambah UKM)
+    P --> hpsukm(Hapus UKM)
+    P --> edtUKM(Edit UKM)
+    P --> listUkm(Daftar UKM)
+
+
+    O --> S(List UKM)
+    S --> cUKM(Cancel)
+    S --> pilukm(Pendaftar)
+    pilukm --> Cpilukm(Cancel)
+    pilukm --> T(Input Nilai)
+    pilukm --> U(Hapus Pendaftar)
+
+    O --> R(Quit)
 ```
