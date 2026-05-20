@@ -1,0 +1,15 @@
+{
+    "ukm": [
+        {
+            "nama_ukm": "UKM Robotika",
+            "desk_kegiatan": "Fokus pengembangan robot dan AI",
+            "kuota_pendaftar": 5
+        },
+        {
+            "nama_ukm": "UKM Paduan Suara",
+            "desk_kegiatan": "Pengembangan bakat seni suara",
+            "kuota_pendaftar": 10
+        }
+    ],
+    "pendaftar": []
+}
