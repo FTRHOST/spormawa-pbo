@@ -99,6 +99,10 @@ while True:
                         # 4. Memasukkan pendaftar ke list global dan list internal milik UKM
                         list_pendaftar.append(mhs_baru)
                         list_ukm[pilih_ukm].tambah_pendaftar(mhs_baru) 
+                        
+                        # 5. SIMPAN DATA KE FILE JSON
+                        simpan_data(list_ukm, list_pendaftar)
+                        print("\nPendaftaran berhasil dan data telah disimpan!")
                     else:
                         print("Pilihan UKM tidak valid. Pendaftaran dibatalkan.")
                         
