@@ -2,6 +2,12 @@
 
 Sistem Pendaftaran Organisasi Mahasiswa (ORMAWA) berbasis Python CLI yang dirancang dengan prinsip Pemrograman Berorientasi Objek (OOP). Sistem ini memungkinkan mahasiswa untuk mendaftar ke berbagai UKM dan memungkinkan Admin untuk melakukan seleksi nilai serta menentukan kelulusan.
 
+oleh:
+1. 43050250031 ANDI KURNIAWAN
+2. 43050250010 MIFTAKHUL ANWAR
+3. 43050250011 MUHAMMAD FATHIR AL FARUQ
+4. 43050250034 RIZKY ANGFAUZY
+
 ## Fitur Utama
 - **Role User:** Memilih UKM, mengisi formulir pendaftaran, dan mengecek status kelulusan.
 - **Role Admin:** Mengelola data UKM (tambah/lihat) dan memberikan penilaian seleksi kepada pendaftar.
