@@ -1,4 +1,4 @@
-# SPORMAWA-PBO (Sistem Pendaftaran Ormawa)
+# SPORMAWA-PBO (Sistem Pendaftaran Ormawa) Kelompok 7
 
 Sistem Pendaftaran Organisasi Mahasiswa (ORMAWA) berbasis Python CLI yang dirancang dengan prinsip Pemrograman Berorientasi Objek (OOP). Sistem ini memungkinkan mahasiswa untuk mendaftar ke berbagai UKM dan memungkinkan Admin untuk melakukan seleksi nilai serta menentukan kelulusan.
 
