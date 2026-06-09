@@ -32,6 +32,10 @@ class Pendaftar(Civitas):
         self.ukm_pilihan = ukm_pilihan  # <--- Menyimpan nama UKM yang dipilih
         self.hasil_seleksi = None
 
+    # Override method polimorfik
+    def tampilkan_info(self):
+        print(f"[Pendaftar] Nama: {self.nama} | UKM Pilihan: {self.ukm_pilihan} | Status: {self.get_status_kelulusan()}")
+
     def get_status_kelulusan(self):
         return self.__status_kelulusan
 
