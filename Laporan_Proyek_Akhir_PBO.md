@@ -153,9 +153,10 @@ classDiagram
         + to_dict() dict
         + from_dict(data: dict) seleksi
     }
-    Civitas <|-- Pendaftar : Inheritance (Pewarisan)
-    UKM o-- Pendaftar : Aggregation (Container Pendaftar)
-    Pendaftar o-- seleksi : Aggregation (Container Hasil Seleksi)
+    Civitas <|-- Pendaftar : "Inheritance (Pewarisan)"
+    UKM o-- Pendaftar : "Aggregation (Container Pendaftar)"
+    Pendaftar o-- seleksi : "Aggregation (Container Hasil Seleksi)"
+
 ```
 *Gambar 2.1: Diagram Kelas UML SPORMAWA-PBO*
 
@@ -181,25 +182,30 @@ Agregasi adalah hubungan "memiliki" (*has-a relation*) di mana satu objek bertin
 Visualisasi relasi agregasi objek ini digambarkan di bawah ini:
 
 ```mermaid
-objectDiagram
-    object "ukm_robotika : UKM" {
-        nama_ukm = "UKM Robotika"
-        kuota_pendaftar = 5
-    }
-    object "pendaftar_1 : Pendaftar" {
-        nama = "Andi Wijaya"
-        NIM = "43050250099"
-        ukm_pilihan = "UKM Robotika"
-        status_kelulusan = "LULUS"
-    }
-    object "nilai_1 : seleksi" {
-        nilai_wawancara = 85
-        nilai_keterampilan = 80
-        nilai_sikap = 90
-    }
-    
-    ukm_robotika o-- pendaftar_1 : menampung di daftar_pendaftar
-    pendaftar_1 o-- nilai_1 : menampung di hasil_seleksi
+flowchart TD
+    subgraph ukm_robotika ["ukm_robotika : UKM"]
+        direction TB
+        ukm_nama["nama_ukm = 'UKM Robotika'"]
+        ukm_kuota["kuota_pendaftar = 5"]
+    end
+
+    subgraph pendaftar_1 ["pendaftar_1 : Pendaftar"]
+        direction TB
+        p_nama["nama = 'Andi Wijaya'"]
+        p_nim["NIM = '43050250099'"]
+        p_ukm["ukm_pilihan = 'UKM Robotika'"]
+        p_status["status_kelulusan = 'LULUS'"]
+    end
+
+    subgraph nilai_1 ["nilai_1 : seleksi"]
+        direction TB
+        n_wawancara["nilai_wawancara = 85"]
+        n_keterampilan["nilai_keterampilan = 80"]
+        n_sikap["nilai_sikap = 90"]
+    end
+
+    ukm_robotika ---|menampung di daftar_pendaftar| pendaftar_1
+    pendaftar_1 ---|menampung di hasil_seleksi| nilai_1
 ```
 *Gambar 2.2: Visualisasi Relasi Agregasi Objek*
 
