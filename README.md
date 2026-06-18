@@ -21,13 +21,13 @@ oleh:
 Berikut adalah rincian tahapan pengembangan proyek ini:
 
 1. **[Tahap 1: Perancangan Arsitektur dan Draft Class](proses/tahap1.md)**
-    - Perancangan struktur kelas dan diagram alir (Mermaid).
+   - Perancangan struktur kelas dan diagram alir (Mermaid).
 2. **[Tahap 2: Implementasi Enkapsulasi dan Pewarisan](proses/tahap2.md)**
-    - Penghubungan kelas dengan Inheritance dan pengamanan data dengan Private Attributes & Getter/Setter.
+   - Penghubungan kelas dengan Inheritance dan pengamanan data dengan Private Attributes & Getter/Setter.
 3. **[Tahap 3: Implementasi Polimorfisme dan Logika Bisnis](proses/tahap3.md)**
-    - Penerapan method overriding dan logika inti perhitungan seleksi serta kuota.
-4. **[Tahap 4: Pembuatan Menu Interaktif (CLI)](proses/tahap4.md)**
-    - Pembangunan antarmuka berbasis teks dengan perulangan `while True` dan input interaktif.
+   - Penerapan method overriding dan logika inti perhitungan seleksi serta kuota.
+4. **[Tahap 4: Pembuatan Menu Interaktif (CLI)](proses/tahap4.md)** - Pembangunan antarmuka berbasis teks dengan perulangan `while True` dan input interaktif.
+   Berikut adalah link laporanya: [LAPORAN](Laporan_Proyek_Akhir_PBO.md)
 
 ## Cara Menjalankan
 
