@@ -55,6 +55,9 @@
 1. [Gambar 2.1: Diagram Kelas UML SPORMAWA-PBO](#22-representasi-struktur-kode)
 2. [Gambar 2.2: Visualisasi Relasi Agregasi Objek](#23-rancangan-agregasi-relasi-objek)
 3. [Gambar 4.1: Flowchart Alur Menu Interaktif CLI](#41-alur-menu-interaktif-cli)
+4. [Gambar 5.1: Tangkapan Layar Menu User & Pendaftaran](#52-tangkapan-layar-screenshot-terminal)
+5. [Gambar 5.2: Tangkapan Layar Input Nilai Seleksi oleh Admin](#52-tangkapan-layar-screenshot-terminal)
+6. [Gambar 5.3: Tangkapan Layar Status Kelulusan Mahasiswa](#52-tangkapan-layar-screenshot-terminal)
 
 ---
 
@@ -372,16 +375,16 @@ Pengujian dilakukan dengan menguji 3 skenario utama:
 Berikut adalah visualisasi hasil eksekusi program di terminal sesuai skenario uji coba:
 
 #### 1. Menu Utama & Pengisian Formulir Pendaftaran oleh User
-
-![Menu Utama & Pengisian Formulir Pendaftaran oleh User](screenshoots/menu-user.png)
+*Gambar 5.1: Tangkapan Layar Menu User & Pendaftaran*
+![Tangkapan Layar Menu User & Pendaftaran](screenshoots/menu-user.png)
 
 #### 2. Admin Melakukan Input Nilai Seleksi & Sistem Menghitung Rata-rata
-
-![Admin Melakukan Input Nilai Seleksi & Sistem Menghitung Rata-rata](screenshoots/menu-admin.png)
+*Gambar 5.2: Tangkapan Layar Input Nilai Seleksi oleh Admin*
+![Tangkapan Layar Input Nilai Seleksi oleh Admin](screenshoots/menu-admin.png)
 
 #### 3. Cek Status Kelulusan oleh Mahasiswa Menggunakan NIM
-
-![Cek Status Kelulusan oleh Mahasiswa Menggunakan NIM](screenshoots/cek-kelulusan.png)
+*Gambar 5.3: Tangkapan Layar Status Kelulusan Mahasiswa*
+![Tangkapan Layar Status Kelulusan Mahasiswa](screenshoots/cek-kelulusan.png)
 
 
 ---
