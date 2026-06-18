@@ -373,107 +373,16 @@ Berikut adalah visualisasi hasil eksekusi program di terminal sesuai skenario uj
 
 #### 1. Menu Utama & Pengisian Formulir Pendaftaran oleh User
 
-```text
-===================================
-  SISTEM PENDAFTARAN ORMAWA FST
-===================================
-1. Masuk sebagai User / Pendaftar
-2. Masuk sebagai Admin
-0. Keluar Aplikasi
-===================================
-Pilih angka untuk peran Anda: 1
-
-------------------------------
-   MENU USER / PENDAFTAR
-------------------------------
-1. Pilih UKM & Isi Formulir
-2. Lihat Status Pendaftaran
-0. Kembali ke Menu Utama
-------------------------------
-Pilih menu: 1
-
---- Formulir: Pemilihan UKM ---
-1. UKM Robotika (Kuota: 5)
-2. UKM Paduan Suara (Kuota: 10)
-3. UKM Olahraga (Kuota: 15)
-4. UKM Mapala (Kuota: 10)
-Pilih nomor UKM yang ingin diikuti: 1
-
-Anda memilih: UKM Robotika
---- Masukkan Data Diri ---
-Nama Lengkap    : Andi Wijaya
-NIM             : 43050250099
-Program Studi   : Teknologi Informasi
-Fakultas        : Sains dan Teknologi
-Tanggal Lahir  : 2005-08-20
-Angkatan        : 2025
-Nomor Kontak    : 081234567890
-Riwayat Organisasi: Anggota Pramuka SMA
-Motivasi Memilih  : Ingin mempelajari AI dan robotika lebih dalam
-
-Pendaftaran berhasil dan data telah disimpan!
-```
+![Menu Utama & Pengisian Formulir Pendaftaran oleh User](screenshoots/menu-user.png)
 
 #### 2. Admin Melakukan Input Nilai Seleksi & Sistem Menghitung Rata-rata
 
-```text
-===================================
-  SISTEM PENDAFTARAN ORMAWA FST
-===================================
-1. Masuk sebagai User / Pendaftar
-2. Masuk sebagai Admin
-0. Keluar Aplikasi
-===================================
-Pilih angka untuk peran Anda: 2
-
-##############################
-   MENU ADMIN UTAMA
-##############################
-1. Kelola Data UKM
-2. Kelola Data Pendaftar & Seleksi
-0. Kembali ke Menu Utama
-##############################
-Pilih menu admin: 2
-
---- Kelola Pendaftar & Input Nilai ---
-1. Andi Wijaya (UKM Robotika) | Status: Diproses - Belum dinilai
-
-Pilih nomor mahasiswa untuk dinilai (atau 0 untuk batal): 1
-
-Input Nilai Seleksi untuk Andi Wijaya:
-Nilai Wawancara (0-100)   : 85
-Nilai Keterampilan (0-100): 80
-Nilai Sikap (0-100)       : 90
-
-Hasil: Andi Wijaya dinyatakan LULUS dengan rata-rata 85.00
-```
+![Admin Melakukan Input Nilai Seleksi & Sistem Menghitung Rata-rata](screenshoots/menu-admin.png)
 
 #### 3. Cek Status Kelulusan oleh Mahasiswa Menggunakan NIM
 
-```text
-===================================
-  SISTEM PENDAFTARAN ORMAWA FST
-===================================
-1. Masuk sebagai User / Pendaftar
-2. Masuk sebagai Admin
-0. Keluar Aplikasi
-===================================
-Pilih angka untuk peran Anda: 1
+![Cek Status Kelulusan oleh Mahasiswa Menggunakan NIM](screenshoots/cek-kelulusan.png)
 
-------------------------------
-   MENU USER / PENDAFTAR
-------------------------------
-1. Pilih UKM & Isi Formulir
-2. Lihat Status Pendaftaran
-0. Kembali ke Menu Utama
-------------------------------
-Pilih menu: 2
-
---- Cek Status Kelulusan ---
-Masukkan NIM Anda: 43050250099
-Nama   : Andi Wijaya
-Status : LULUS
-```
 
 ---
 

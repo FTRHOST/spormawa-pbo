@@ -9,7 +9,36 @@
             "nama_ukm": "UKM Paduan Suara",
             "desk_kegiatan": "Pengembangan bakat seni suara",
             "kuota_pendaftar": 10
+        },
+        {
+            "nama_ukm": "UKM Olahraga",
+            "desk_kegiatan": "Fokus pada pengembangan fisik dan kerjasama tim",
+            "kuota_pendaftar": 15
+        },
+        {
+            "nama_ukm": "UKM Mapala",
+            "desk_kegiatan": "Kegiatan alam bebas dan pelestarian lingkungan",
+            "kuota_pendaftar": 10
         }
     ],
-    "pendaftar": []
+    "pendaftar": [
+        {
+            "nama": "Andi Wijaya",
+            "NIM": "43050250011",
+            "prodi": "Teknologi Informasi",
+            "fakultas": "Sains dan Teknologi",
+            "tanggal_lahir": "2007-06-26",
+            "angkatan": "2025",
+            "kontak": "088888888888",
+            "riwayat_organisasi": "Anggota OSIS",
+            "status_kelulusan": "LULUS",
+            "motivasi": "Ingin mempelajari robotika dan AI",
+            "ukm_pilihan": "UKM Robotika",
+            "hasil_seleksi": {
+                "nilai_wawancara": 85,
+                "nilai_keterampilan": 85,
+                "nilai_sikap": 90
+            }
+        }
+    ]
 }
